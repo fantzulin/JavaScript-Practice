@@ -1,0 +1,23 @@
+body{
+  text-align: center;
+}
+h1,h2{
+  font-family: 'Microsoft JhengHei';
+}
+button{
+  width: 200px;
+  height: 50px;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Microsoft JhengHei';
+  background-color: lightblue;
+  border: none;
+  border-radius: 3px;
+}
+.game-center{
+  text-align: center;
+}
+.game{
+  display: inline-flex;
+}
