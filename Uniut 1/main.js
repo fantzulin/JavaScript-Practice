@@ -1,13 +1,10 @@
 var startBtn = document.querySelector('#start-btn');
-var userScissors = document.getElementById('#scissors');
-var userStone = document.getElementById('#stone');
-var userpaper = document.getElementById('#paper');
+var scissorsBtn = document.querySelector('#scissors');
+var stoneBtn = document.querySelector('#stone');
+var paperBtn = document.querySelector('#paper');
 
-startBtn.addEventListener('click', function(){
+scissorsBtn.addEventListener('click', function(){
   var pcChoice = Math.floor(Math.random() * 3);
-  var choice = parseInt(prompt('剪刀石頭布!你要出什麼? 0. 剪刀 1. 石頭 2. 布', 0));
-  if (choice === 0) {
-    alert('你出剪刀');
     if (pcChoice === 0) {
       document.getElementById("pc").src = "scissors.png";
       document.getElementById("user").src = "scissors.png";
@@ -23,44 +20,67 @@ startBtn.addEventListener('click', function(){
       document.getElementById("user").src = "scissors.png";
       document.getElementById("score").innerHTML = "你贏了!";
       document.getElementById("score-img").src = "https://media.giphy.com/media/xMIlfwRRQNEcw/giphy.gif";
-
     }
-  } else if (choice === 1) {
-    alert('你出石頭');
-    if (pcChoice === 0) {
-      document.getElementById("pc").removeAttribute("hidden");
-      document.getElementById("user").removeAttribute("hidden");
-      document.getElementById("score").innerHTML = "你贏了!";
-      document.getElementById("score-img").src = "https://media.giphy.com/media/xMIlfwRRQNEcw/giphy.gif";
-    }else if (pcChoice === 1) {
-      document.getElementById("pc-r").removeAttribute("hidden");
-      document.getElementById("user-r").removeAttribute("hidden");
-      document.getElementById("score").innerHTML = "沒輸沒贏!";
-      document.getElementById("score-img").src = "https://media.giphy.com/media/QqkA9W8xEjKPC/giphy.gif";
+});
 
-    }else if (pcChoice === 2) {
-      document.getElementById("pc").removeAttribute("hidden");
-      document.getElementById("user").removeAttribute("hidden");
-      document.getElementById("score").innerHTML = "你輸了!";
-      document.getElementById("score-img").src = "https://media.giphy.com/media/11StaZ9Lj74oCY/giphy.gif";
-    }
+stoneBtn.addEventListener('click', function(){
+  var pcChoice = Math.floor(Math.random() * 3);
+  if (pcChoice === 0) {
+    document.getElementById("pc").src = "scissors.png";
+    document.getElementById("user").src = "stone.png";
+    document.getElementById("score").innerHTML = "你贏了!";
+    document.getElementById("score-img").src = "https://media.giphy.com/media/xMIlfwRRQNEcw/giphy.gif";
+  }else if (pcChoice === 1) {
+    document.getElementById("pc").src = "stone.png";
+    document.getElementById("user").src = "stone.png";
+    document.getElementById("score").innerHTML = "沒輸沒贏!";
+    document.getElementById("score-img").src = "https://media.giphy.com/media/QqkA9W8xEjKPC/giphy.gif";
+
+  }else if (pcChoice === 2) {
+    document.getElementById("pc").src = "paper.png";
+    document.getElementById("user").src = "stone.png";
+    document.getElementById("score").innerHTML = "你輸了!";
+    document.getElementById("score-img").src = "https://media.giphy.com/media/11StaZ9Lj74oCY/giphy.gif";
+  }
+});
+
+paperBtn.addEventListener('click', function(){
+  var pcChoice = Math.floor(Math.random() * 3);
+  if (pcChoice === 0) {
+    document.getElementById("pc").src = "scissors.png";
+    document.getElementById("user").src = "paper.png";
+    document.getElementById("score").innerHTML = "你輸了!";
+    document.getElementById("score-img").src = "https://media.giphy.com/media/11StaZ9Lj74oCY/giphy.gif";
+  }else if (pcChoice === 1) {
+    document.getElementById("pc").src = "stone.png";
+    document.getElementById("user").src = "paper.png";
+    document.getElementById("score").innerHTML = "你贏了!";
+    document.getElementById("score-img").src = "https://media.giphy.com/media/xMIlfwRRQNEcw/giphy.gif";
+  }else if (pcChoice === 2) {
+    document.getElementById("pc").src = "paper.png";
+    document.getElementById("user").src = "paper.png";
+    document.getElementById("score").innerHTML = "沒輸沒贏!";
+    document.getElementById("score-img").src = "https://media.giphy.com/media/QqkA9W8xEjKPC/giphy.gif";
+  }
+});
+/*
+
   } else if (choice === 2) {
     alert('你出布');
     if (pcChoice === 0) {
-      document.getElementById("pc").removeAttribute("hidden");
-      document.getElementById("user").removeAttribute("hidden");
+      document.getElementById("pc").src = "scissors.png";
+      document.getElementById("user").src = "paper.png";
       document.getElementById("score").innerHTML = "你輸了!";
       document.getElementById("score-img").src = "https://media.giphy.com/media/11StaZ9Lj74oCY/giphy.gif";
     }else if (pcChoice === 1) {
-      document.getElementById("pc").removeAttribute("hidden");
-      document.getElementById("user").removeAttribute("hidden");
+      document.getElementById("pc").src = "stone.png";
+      document.getElementById("user").src = "paper.png";
       document.getElementById("score").innerHTML = "你贏了!";
       document.getElementById("score-img").src = "https://media.giphy.com/media/xMIlfwRRQNEcw/giphy.gif";
     }else if (pcChoice === 2) {
-      document.getElementById("pc").removeAttribute("hidden");
-      document.getElementById("user").removeAttribute("hidden");
+      document.getElementById("pc").src = "paper.png";
+      document.getElementById("user").src = "paper.png";
       document.getElementById("score").innerHTML = "沒輸沒贏!";
       document.getElementById("score-img").src = "https://media.giphy.com/media/QqkA9W8xEjKPC/giphy.gif";
     }
-  }
-});
+  }*/

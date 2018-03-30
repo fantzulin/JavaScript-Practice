@@ -9,30 +9,28 @@
   <body>
     <h1>第一個 JavaScipt 練習</h1>
     <h2>和電腦對決剪刀石頭布</h2>
-    <img src="https://media.giphy.com/media/rcRwO8GMSfNV6/giphy.gif" alt="scoreimg" id="score-img">
-    <br>
-    <button type="button" name="button" id="start-btn">開始對決</button>
-    <!--
+    <div class="game-center">
+      <br>
+      <div class="game">
+        <div>
+          <h3>電腦出拳</h3>
+          <img src="stone.png" alt="pc布" width="100" id="pc">
+        </div>
+        <div>
+          <h3>玩家出拳</h3>
+          <img src="stone.png" alt="user布" width="100" id="user">
+        </div>
+      </div>
+    </div>
     <div class="game">
       <button type="button" name="button" id="scissors">剪刀</button>
       <button type="button" name="button" id="stone">石頭</button>
       <button type="button" name="button" id="paper">布</button>
     </div>
-  -->
-    <div class="game-center">
-      <h3 id="score"></h3>
-      <br>
-      <div class="game">
-        <div>
-          <h3>電腦出拳</h3>
-          <img src="paper.png" alt="pc布" width="100" id="pc" hidden>
-        </div>
-        <div>
-          <h3>玩家出拳</h3>
-          <img src="paper.png" alt="user布" width="100" id="user" hidden>
-        </div>
-      </div>
-    </div>
+    <br>
+    <br>
+    <h3 id="score"></h3>
+    <img src="https://media.giphy.com/media/rcRwO8GMSfNV6/giphy.gif" alt="scoreimg" id="score-img">
     <script src="main.js"></script>
   </body>
 </html>
