@@ -9,7 +9,7 @@ todoBtn.addEventListener('click', function (e) {
     if (todoInputVal !== '') {
         var todoLi = document.createElement('li');
 
-        todoLi.innerHTML = todoInputVal + '<button>X</button>';
+        todoLi.innerHTML = todoInputVal + ' ' + '<button class="ui red circular label">X</button>';
         result.appendChild(todoLi);
         todoInput.value = '';
     } else {

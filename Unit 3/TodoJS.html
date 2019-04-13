@@ -5,16 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../Semantic-UI-CSS-master/semantic.min.css">
+
     <title>ToDoJS</title>
 </head>
 
 <body>
-    <h1>ToDoJS</h1>
-    <form action="">
-        <input type="text" id="todoInput" name="todo">
-        <button type="button" id="todoBtn">提交送出</button>
-    </form>
-    <ul id="result"></ul>
+    <section class="ui container">
+        <h1>ToDoJS</h1>
+        <form action="" class="ui form">
+            <div class="two fields">
+                <div class="field">
+                    <input type="text" id="todoInput" name="todo">
+                        </div>
+                    <div class="field">
+                        <button type="button" class="ui button" id="todoBtn">提交送出</button>
+                    </div>
+                </div>
+        </form>
+        <ul class="ui list" id="result"></ul>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
     <script src="todoJS.js"></script>
 </body>
 
