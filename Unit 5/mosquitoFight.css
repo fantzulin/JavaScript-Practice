@@ -1,0 +1,8 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    cursor: url('images/syou.png'), url('images/syou.png'), auto;
+}
