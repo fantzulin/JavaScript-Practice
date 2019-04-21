@@ -26,4 +26,15 @@ var disappear = setInterval(function () {
     if (document.getElementById('mosquito') !== null) {
         document.body.removeChild(document.getElementById('mosquito'));
     }
-}, 3000);
+}, 2000);
+
+var click = document.body.addEventListener('click', function (e) {
+    var scoreBoard = document.getElementById('score-board');
+
+    if (e.target.id === 'mosquito') {
+        console.log(e.target);
+        e.target.src = 'images/tenbura.png';
+        score += 5;
+        scoreBoard.innerHTML = score;
+    }
+});

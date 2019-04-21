@@ -4,5 +4,9 @@ body {
 }
 
 body {
-    cursor: url('images/syou.png'), url('images/syou.png'), auto;
+    cursor: url('images/syou.png'), auto;
+}
+
+body:active {
+    cursor: url('images/syou-rot.png'), auto;
 }
