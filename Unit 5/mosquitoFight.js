@@ -20,6 +20,15 @@ var timer = setInterval(function () {
         document.body.appendChild(mosquito);
 
     }
+    countdown -= 1;
+    document.getElementById('counter').innerHTML = countdown;
+
+    if (countdown <= 0) {
+        gameOver = true;
+        clearInterval(timer);
+        clearInterval(disappear);
+        document.getElementById('counter').innerHTML = 'gameOver!'
+    }
 }, 1000);
 
 var disappear = setInterval(function () {
