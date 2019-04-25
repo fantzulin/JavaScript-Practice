@@ -4,6 +4,8 @@ body {
 }
 
 body {
+    background-image: url('images/tenbura-ori.png');
+    background-size: 100px auto;
     cursor: url('images/syou.png'), auto;
 }
 

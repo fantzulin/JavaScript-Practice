@@ -10,8 +10,8 @@ var timer = setInterval(function () {
         mosquito.src = 'images/tenbura-ori.png';
         mosquito.style.position = 'absolute';
 
-        var x = Math.floor(Math.random() * window.innerWidth);
-        var y = Math.floor(Math.random() * window.innerHeight);
+        var x = Math.floor(Math.random() * window.innerWidth - 100);
+        var y = Math.floor(Math.random() * window.innerHeight - 100);
 
         mosquito.style.left = x + 'px';
         mosquito.style.top = y + 'px';
