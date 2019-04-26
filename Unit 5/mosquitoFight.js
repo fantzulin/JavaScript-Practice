@@ -1,5 +1,5 @@
 var score = 0;
-var countdown = 10;
+var countdown = 30;
 
 var timer = setInterval(function () {
     var gameOver = false;
@@ -38,13 +38,13 @@ var timer = setInterval(function () {
         clearInterval(disappear);
         document.getElementById('counter').innerHTML = 'gameOver!'
     }
-}, 1000);
+}, 3000);
 
 var disappear = setInterval(function () {
     if (document.getElementById('mosquito') !== null) {
         document.getElementById('divBody').removeChild(document.getElementById('mosquito'));
     }
-}, 2000);
+}, 5000);
 
 var click = document.body.addEventListener('click', function (e) {
     var scoreBoard = document.getElementById('score-board');
