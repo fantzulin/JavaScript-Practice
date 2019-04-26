@@ -10,8 +10,8 @@ var timer = setInterval(function () {
         mosquito.src = 'images/tenbura-ori.png';
         mosquito.style.position = 'absolute';
 
-        var x = Math.floor(Math.random() * window.innerWidth - 100);
-        var y = Math.floor(Math.random() * window.innerHeight - 100);
+        var x = Math.floor(Math.random() * window.innerWidth - 150);
+        var y = Math.floor(Math.random() * window.innerHeight - 150);
 
         if (x < 0) {
             x = 10;
@@ -25,7 +25,7 @@ var timer = setInterval(function () {
 
         mosquito.style.left = x + 'px';
         mosquito.style.top = y + 'px';
-        mosquito.style.width = '100px';
+        mosquito.style.width = '150px';
         mosquito.id = 'mosquito';
         document.getElementById('divBody').appendChild(mosquito);
     }
