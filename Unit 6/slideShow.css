@@ -16,3 +16,15 @@
         opacity: 1;
     }
 }
+
+.divBtn {
+    width: 300px;
+}
+
+.btnPrev {
+    float: left;
+}
+
+.btnNext {
+    float: right;
+}
