@@ -6,8 +6,11 @@ xhr.onreadystatechange = function () {
         var data = JSON.parse(xhr.responseText);
 
         data.forEach(function (value, index) {
+            var h5 = document.createElement('h5');
             var p = document.createElement('p');
-            p.innerText = data[index].ParkName;
+            h5.innerText = data[index].ParkName;
+            p.innerText = data[index].Location;
+            document.querySelector('#result').appendChild(h5);
             document.querySelector('#result').appendChild(p);
         });
     }
