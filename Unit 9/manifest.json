@@ -1,5 +1,5 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "WeatherTab",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "This extension was created with the awesome extensionizr.com",
@@ -22,8 +22,7 @@
   "chrome_url_overrides": {
     "newtab": "src/override/override.html"
   },
-  "content_scripts": [
-    {
+  "content_scripts": [{
       "matches": [
         "https://www.google.com/*"
       ],

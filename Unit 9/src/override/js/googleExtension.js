@@ -5,7 +5,13 @@ xhr.send();
 xhr.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
         var data = JSON.parse(this.responseText);
-        console.log(data.records.locations[0].location[0].weatherElement);
+
+        var spanLocation = document.getElementById("location");
+        var spanLocationName = document.getElementById("locationName");
+        var location = data.records.locations[0].locationsName;
+        var locationName = data.records.locations[0].location[0].locationName;
+        spanLocation.innerHTML = location;
+        spanLocationName.innerHTML = locationName;
 
         var pWeatherRain = document.getElementById("weatherRain");
         var pWeatherTime = document.getElementById("weatherTime");
@@ -15,17 +21,19 @@ xhr.onreadystatechange = function () {
         var rainTimeFrom = weatherRainArray.time[0].startTime;
         var rainTimeEnd = weatherRainArray.time[0].endTime;
         pWeatherTime.innerHTML = rainTimeFrom + "~" + rainTimeEnd;
-        pWeatherRain.innerHTML = "降雨機率" + rainPercent + "百分比";
+        pWeatherRain.innerHTML = "降雨機率" + rainPercent + "%";
 
 
         var pWeatherTemperature = document.getElementById("weatherTemperature");
         var temperatureArray = data.records.locations[0].location[0].weatherElement[1];
         var temperatureDescription = temperatureArray.description;
         var temperatureValue = temperatureArray.time[0].elementValue[0].value;
-        pWeatherTemperature.innerHTML = temperatureDescription + temperatureValue + "攝氏度";
+        pWeatherTemperature.innerHTML = temperatureDescription + temperatureValue + "度C";
 
-        console.log(data.records.locations[0].location[0].weatherElement[2]);
-
+        var pWeatherHumidity = document.getElementById("weatherHumidity");
+        var humidityArray = data.records.locations[0].location[0].weatherElement[2];
+        var humidityDescription = humidityArray.description;
+        var humidityDescriptionValue = humidityArray.time[0].elementValue[0].value;
+        pWeatherHumidity.innerHTML = humidityDescription + humidityDescriptionValue + "%";
     }
-
 };
